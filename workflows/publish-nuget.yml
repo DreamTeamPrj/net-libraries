@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 9.0
 
       - name: Build System
-        working-directory: src/System
+        working-directory: src/System/System.sln
         run: |
           dotnet restore
           dotnet build --configuration Release

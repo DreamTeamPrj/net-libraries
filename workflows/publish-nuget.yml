@@ -19,11 +19,11 @@ jobs:
           dotnet-version: 9.0
 
       - name: Build System
-        working-directory: src/System/System.sln
+        working-directory: src/System
         run: |
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet pack --output ../../build
+          dotnet restore System.sln
+          dotnet build System.sln --configuration Release
+          dotnet pack System.sln --configuration Release --output ../../build
 
       - name: Publish to GitHub Packages
         env:

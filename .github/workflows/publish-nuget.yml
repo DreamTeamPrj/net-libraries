@@ -18,11 +18,12 @@ jobs:
         with:
           dotnet-version: 9.0
 
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build and pack
-        run: dotnet build --configuration Release
+      - name: Build System
+        working-directory: src/System
+        run: |
+          dotnet restore System.sln
+          dotnet build System.sln --configuration Release
+          dotnet pack System.sln --configuration Release --output ../../build
 
       - name: Publish to GitHub Packages
         env:

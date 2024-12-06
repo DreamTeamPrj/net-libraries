@@ -18,12 +18,11 @@ jobs:
         with:
           dotnet-version: 9.0
 
-      # Добавляем шаг для проверки структуры каталогов
       - name: List directory contents
         run: ls -la src/System
 
       - name: Restore and Build System
-        working-directory: src/System # Указываем путь к папке с .sln
+        working-directory: src/System
         run: |
           dotnet restore System.sln
           dotnet build System.sln --configuration Release

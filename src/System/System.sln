@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.BaseLayers.Applicati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.BaseLayers.Api", "BaseLayers\System.BaseLayers.Api\System.BaseLayers.Api.csproj", "{D320E551-79F6-4175-BF53-42E89E43F810}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{CB0EB6ED-E91A-48CD-9B33-AE0E175D69BD}"
+	ProjectSection(SolutionItems) = preProject
+		system-packeges.props = system-packeges.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
